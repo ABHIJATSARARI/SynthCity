@@ -44,9 +44,6 @@ Update `package.json` -> `repository.url` and `homepage` with your GitHub repo U
 License
 
 This repo is licensed under MIT. See `LICENSE`.
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
 1. Install dependencies:
    `npm install`
