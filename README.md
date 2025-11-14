@@ -2,7 +2,7 @@
 
 # 🎵 Eademem — Synth City (AI Music Metropolis) 🌆
 
-![Logo](./public/logo.png)
+![Logo](logo.png)
 
 <p align="center">
   <img src="./public/logo-animated.gif" alt="Animated Logo" width="200"/>
@@ -95,28 +95,6 @@ synthcity-ai-music-metropolis/
 ```
 
 ---
-
-## 🎨 Adding Your Logo
-
-### Static Logo
-1. Replace `./public/logo.png` with your static logo
-2. Recommended size: 512x512px or higher for crisp display
-
-### Animated Logo  
-1. Replace `./public/logo-animated.gif` with your animated logo
-2. Keep file size under 2MB for fast loading
-3. Recommended dimensions: 400x400px max
-
-### Logo Integration
-```html
-<!-- In index.html -->
-<link rel="icon" type="image/png" href="/logo.png" />
-
-<!-- In your React components -->
-<img src="/logo.png" alt="Eademem Logo" />
-<img src="/logo-animated.gif" alt="Animated Logo" />
-```
-
 ---
 
 ## 🛠️ Tech Stack
@@ -165,10 +143,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ⭐ Star this repo if you find it helpful!
 
-</div>
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
 ## Run Locally
 
