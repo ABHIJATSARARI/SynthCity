@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SynthCity: AI Music Metropolis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #0a0a1a;
+        color: #e0e0e0;
+      }
+      .neon-text {
+        text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 20px #00f, 0 0 40px #0ff, 0 0 80px #0ff;
+      }
+      .neon-box-cyan {
+        box-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff, inset 0 0 5px #0ff, inset 0 0 10px #0ff;
+      }
+      .neon-box-fuchsia {
+        box-shadow: 0 0 5px #f0f, 0 0 10px #f0f, 0 0 15px #f0f, inset 0 0 5px #f0f, inset 0 0 10px #f0f;
+      }
+      /* Tooltip Styles */
+      .has-tooltip {
+        position: relative;
+        cursor: help;
+      }
+      .tooltip {
+        visibility: hidden;
+        opacity: 0;
+        width: 160px;
+        background-color: #1a1a2e;
+        color: #0ff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px;
+        position: absolute;
+        z-index: 10;
+        bottom: 125%; /* Position above the element */
+        left: 50%;
+        margin-left: -80px; /* Use half of the width to center */
+        transition: opacity 0.3s;
+        font-size: 0.75rem;
+        line-height: 1.2;
+        box-shadow: 0 0 5px #0ff;
+        pointer-events: none; /* So it doesn't interfere with mouse events */
+      }
+      .tooltip-fuchsia {
+        color: #f0f;
+        box-shadow: 0 0 5px #f0f;
+      }
+      .tooltip::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #0ff transparent transparent transparent;
+      }
+      .tooltip-fuchsia::after {
+        border-color: #f0f transparent transparent transparent;
+      }
+      .has-tooltip:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+      /* Building Mixer Card Hover Effect */
+      .building-mixer-card {
+        transition: box-shadow 0.2s ease-in-out;
+      }
+      .building-mixer-card:hover {
+        box-shadow: 0 0 12px var(--glow-color);
+      }
+
+      /* Splash Screen Styles */
+      #splash-screen {
+        position: fixed;
+        inset: 0;
+        background-color: #0a0a1a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        animation: screen-fade-out 5s ease-in-out forwards;
+        overflow: hidden;
+      }
+      .splash-content {
+        text-align: center;
+      }
+      .splash-logo {
+        font-size: 5rem;
+        font-weight: bold;
+        letter-spacing: 0.25em;
+        animation: logo-animation 5s ease-in-out forwards;
+      }
+      .splash-subtitle {
+        font-size: 1.25rem;
+        color: #f0f;
+        opacity: 0;
+        animation: subtitle-animation 5s ease-in-out forwards;
+      }
+      @keyframes screen-fade-out {
+        0%, 80% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+      @keyframes logo-animation {
+        0% {
+          opacity: 0;
+          transform: scale(0.9);
+          text-shadow: none;
+        }
+        20%, 80% {
+          opacity: 1;
+          transform: scale(1);
+          text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 20px #00f, 0 0 40px #0ff, 0 0 80px #0ff;
+        }
+        100% {
+          opacity: 0;
+          transform: scale(0.95);
+          text-shadow: none;
+        }
+      }
+      @keyframes subtitle-animation {
+        0%, 20% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        40%, 80% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

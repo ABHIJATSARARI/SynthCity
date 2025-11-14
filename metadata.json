@@ -1,0 +1,5 @@
+{
+  "name": "SynthCity: AI Music Metropolis",
+  "description": "A web-based playground where users construct a city where every building represents a musical instrument or rhythm. The city grows as the music evolves, using AI to generate loops that sync visually and audibly with a neon, cyberpunk aesthetic.",
+  "requestFramePermissions": []
+}
